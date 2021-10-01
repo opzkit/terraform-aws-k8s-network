@@ -32,6 +32,12 @@ variable "public_subnet_zones" {
   }
 }
 
+variable "public_subnet_cidrs" {
+  type        = list(string)
+  default     = []
+  description = "Override generated CIDRs for public subnets. If specified, this list must match public_subnet_zones."
+}
+
 variable "private_subnet_zones" {
   type        = list(string)
   default     = []
@@ -40,4 +46,10 @@ variable "private_subnet_zones" {
     condition     = length(var.private_subnet_zones) <= 3
     error_message = "No more than 3 private zones can be provided."
   }
+}
+
+variable "private_subnet_cidrs" {
+  type        = list(string)
+  default     = []
+  description = "Override generated CIDRs for private subnets. If specified, this list must match private_subnet_zones."
 }
