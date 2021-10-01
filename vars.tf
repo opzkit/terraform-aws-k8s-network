@@ -13,9 +13,15 @@ variable "vpc_cidr" {
   default     = "172.20.0.0/16"
   description = "CIDR range for the VPC?"
   validation {
-    condition     = cidrsubnet(var.vpc_cidr, 3, 5) != ""
+    condition     = cidrsubnet(var.vpc_cidr, 3, 5 + var.subnet_cidrs_offset) != ""
     error_message = "A larger CIDR range must be provided."
   }
+}
+
+variable "subnet_cidrs_offset" {
+  type        = number
+  default     = 1
+  description = "Offset into the CIDR generation. Can be useful if you don't want your subnet CIDRs to start at x.x.0.0/19."
 }
 
 variable "public_subnet_zones" {
