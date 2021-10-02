@@ -13,7 +13,7 @@ variable "vpc_cidr" {
   default     = "172.20.0.0/16"
   description = "CIDR range for the VPC?"
   validation {
-    condition     = cidrsubnet(var.vpc_cidr, 3, 5 + var.subnet_cidrs_offset) != ""
+    condition     = cidrsubnet(var.vpc_cidr, 3, 5) != ""
     error_message = "A larger CIDR range must be provided."
   }
 }
