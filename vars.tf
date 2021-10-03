@@ -20,7 +20,7 @@ variable "vpc_cidr" {
 
 variable "subnet_cidrs_offset" {
   type        = number
-  default     = 1
+  default     = 0
   description = "Offset into the CIDR generation. Can be useful if you don't want your subnet CIDRs to start at x.x.0.0/19."
 }
 
