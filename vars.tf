@@ -18,12 +18,6 @@ variable "vpc_cidr" {
   }
 }
 
-variable "subnet_cidrs_offset" {
-  type        = number
-  default     = 0
-  description = "Offset into the CIDR generation. Can be useful if you don't want your subnet CIDRs to start at x.x.0.0/19."
-}
-
 variable "public_subnet_zones" {
   type        = list(string)
   default     = ["a", "b", "c"]
@@ -38,6 +32,12 @@ variable "public_subnet_zones" {
   }
 }
 
+variable "public_subnet_cidrs" {
+  type        = list(string)
+  default     = []
+  description = "Override generated CIDRs for public subnets. If specified, this list must match public_subnet_zones."
+}
+
 variable "private_subnet_zones" {
   type        = list(string)
   default     = []
@@ -46,4 +46,10 @@ variable "private_subnet_zones" {
     condition     = length(var.private_subnet_zones) <= 3
     error_message = "No more than 3 private zones can be provided."
   }
+}
+
+variable "private_subnet_cidrs" {
+  type        = list(string)
+  default     = []
+  description = "Override generated CIDRs for private subnets. If specified, this list must match private_subnet_zones."
 }
