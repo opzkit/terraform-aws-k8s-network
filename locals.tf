@@ -4,7 +4,7 @@ locals {
   number_of_private_zones = length(var.private_subnet_zones)
   create_private_subnets  = local.number_of_private_zones > 0
 
-  provided_cidrs_from_private_zones = length(var.public_subnet_cidrs) > 0 ? zipmap(var.private_subnet_zones, var.public_subnet_cidrs) : {}
+  provided_cidrs_from_private_zones = length(var.public_subnet_cidrs) > 0 && length(var.private_subnet_zones) > 0 ? zipmap(var.private_subnet_zones, var.public_subnet_cidrs) : {}
   provided_cidrs_from_public_zones  = length(var.public_subnet_cidrs) > 0 ? zipmap(var.public_subnet_zones, var.public_subnet_cidrs) : {}
   provided_cidrs                    = local.create_private_subnets ? local.provided_cidrs_from_private_zones : local.provided_cidrs_from_public_zones
 
