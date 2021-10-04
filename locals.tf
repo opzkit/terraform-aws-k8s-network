@@ -1,18 +1,17 @@
 locals {
-  create_private_subnets = length(var.private_subnet_zones) > 0
+  cidrs = cidrsubnets(var.vpc_cidr, 3, 3, 3, 3, 3, 3)
 
-  provided_cidrs = local.create_private_subnets ? tomap({
-    for i, zone in var.private_subnet_zones : zone => var.public_subnet_cidrs[i] }) : tomap({
-  for i, zone in var.public_subnet_zones : zone => var.public_subnet_cidrs[i] })
+  number_of_private_zones = length(var.private_subnet_zones)
+  create_private_subnets  = local.number_of_private_zones > 0
 
-  generated_cidrs = local.create_private_subnets ? tomap({
-    for i, zone in var.private_subnet_zones : zone => cidrsubnet(var.vpc_cidr, 3, i) }) : tomap({
-  for i, zone in var.public_subnet_zones : zone => cidrsubnet(var.vpc_cidr, 3, i) })
+  provided_cidrs_from_private_zones = length(var.public_subnet_cidrs) > 0 ? zipmap(var.private_subnet_zones, var.public_subnet_cidrs) : {}
+  provided_cidrs_from_public_zones  = length(var.public_subnet_cidrs) > 0 ? zipmap(var.public_subnet_zones, var.public_subnet_cidrs) : {}
+  provided_cidrs                    = local.create_private_subnets ? local.provided_cidrs_from_private_zones : local.provided_cidrs_from_public_zones
 
-  public_cidrs = length(var.public_subnet_cidrs) > 0 ? local.provided_cidrs : local.generated_cidrs
+  generated_cidrs_from_private_zones = zipmap(var.private_subnet_zones, slice(local.cidrs, 0, local.number_of_private_zones))
+  generated_cidrs_from_public_zones  = zipmap(var.public_subnet_zones, slice(local.cidrs, 0, length(var.public_subnet_zones)))
+  generated_cidrs                    = local.create_private_subnets ? local.generated_cidrs_from_private_zones : local.generated_cidrs_from_public_zones
 
-  private_cidrs = length(var.private_subnet_cidrs) > 0 ? tomap({
-    for i, zone in var.private_subnet_zones : zone => var.private_subnet_cidrs[i] }) : tomap({
-    for i, zone in var.private_subnet_zones : zone => cidrsubnet(var.vpc_cidr, 3, length(local.public_cidrs) + i)
-  })
+  public_cidrs  = length(var.public_subnet_cidrs) > 0 ? local.provided_cidrs : local.generated_cidrs
+  private_cidrs = length(var.private_subnet_cidrs) > 0 ? zipmap(var.private_subnet_zones, var.private_subnet_cidrs) : zipmap(var.private_subnet_zones, slice(local.cidrs, length(local.public_cidrs), length(local.public_cidrs) + local.number_of_private_zones))
 }
