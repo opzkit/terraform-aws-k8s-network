@@ -32,6 +32,12 @@ variable "public_subnet_zones" {
   }
 }
 
+variable "additional_public_subnet_tags" {
+  type        = map(any)
+  default     = {}
+  description = "Additional tags for public subnets."
+}
+
 variable "public_subnet_cidrs" {
   type        = list(string)
   default     = []
@@ -46,6 +52,12 @@ variable "private_subnet_zones" {
     condition     = length(var.private_subnet_zones) <= 3
     error_message = "No more than 3 private zones can be provided."
   }
+}
+
+variable "additional_private_subnet_tags" {
+  type        = map(any)
+  default     = {}
+  description = "Additional tags for private subnets."
 }
 
 variable "private_subnet_cidrs" {
