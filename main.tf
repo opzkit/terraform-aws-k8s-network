@@ -34,11 +34,11 @@ resource "aws_subnet" "private" {
   availability_zone = "${var.region}${each.key}"
   cidr_block        = each.value
   vpc_id            = aws_vpc.vpc.id
-  tags = {
+  tags = merge({
     "Name"                            = "${var.region}${each.key}.${var.name}"
     "SubnetType"                      = "Private"
     "kubernetes.io/role/internal-elb" = "1"
-  }
+  }, var.additional_private_subnet_tags)
 }
 
 resource "aws_subnet" "public" {
@@ -46,11 +46,11 @@ resource "aws_subnet" "public" {
   availability_zone = "${var.region}${each.key}"
   cidr_block        = each.value
   vpc_id            = aws_vpc.vpc.id
-  tags = {
+  tags = merge({
     "Name"                   = "public-${var.region}${each.key}.${var.name}"
     "SubnetType"             = "Utility"
     "kubernetes.io/role/elb" = "1"
-  }
+  }, var.additional_public_subnet_tags)
 }
 
 resource "aws_internet_gateway" "igw" {
