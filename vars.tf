@@ -22,25 +22,25 @@ variable "public_subnet_zones" {
   type        = list(string)
   default     = ["a", "b", "c"]
   description = "The public subnet group zones. If private_subnet_zones is set the values from that variable will be used instead and these ignored"
-  validation {
-    condition     = length(var.public_subnet_zones) <= 3
-    error_message = "No more than 3 public zones can be provided."
-  }
-  validation {
-    condition     = length(var.public_subnet_zones) > 0
-    error_message = "At least one public zone must be provided."
-  }
+  #  validation {
+  #    condition     = length(var.public_subnet_zones) <= 3
+  #    error_message = "No more than 3 public zones can be provided."
+  #  }
+  #  validation {
+  #    condition     = length(var.public_subnet_zones) > 0
+  #    error_message = "At least one public zone must be provided."
+  #  }
 }
 
 variable "additional_public_subnet_tags" {
-  type        = map(any)
+  type        = map(string)
   default     = {}
   description = "Additional tags for public subnets."
 }
 
 variable "public_subnet_cidrs" {
-  type        = list(string)
-  default     = []
+  type        = map(string)
+  default     = {}
   description = "Override generated CIDRs for public subnets. If specified, this list must match public_subnet_zones."
 }
 
@@ -48,20 +48,37 @@ variable "private_subnet_zones" {
   type        = list(string)
   default     = []
   description = "The private subnet group zones"
-  validation {
-    condition     = length(var.private_subnet_zones) <= 3
-    error_message = "No more than 3 private zones can be provided."
-  }
+  #  validation {
+  #    condition     = length(var.private_subnet_zones) <= 3
+  #    error_message = "No more than 3 private zones can be provided."
+  #  }
 }
 
 variable "additional_private_subnet_tags" {
-  type        = map(any)
+  type        = map(string)
   default     = {}
   description = "Additional tags for private subnets."
 }
 
 variable "private_subnet_cidrs" {
-  type        = list(string)
-  default     = []
+  type        = map(string)
+  default     = {}
   description = "Override generated CIDRs for private subnets. If specified, this list must match private_subnet_zones."
+}
+
+
+resource "null_resource" "private_subnet_zones_check" {
+  count = length(var.private_subnet_zones) > 3 ? "No more than 3 private zones can be provided." : 0
+}
+
+resource "null_resource" "public_subnet_zones_check_0" {
+  count = length(var.private_subnet_zones) > 3 ? "No more than 3 public zones can be provided." : 0
+}
+
+resource "null_resource" "public_subnet_zones_check_1" {
+  count = length(var.public_subnet_zones) < 1 && length(var.public_subnet_cidrs) < 1 ? "At least one public zone (or override) must be provided." : 0
+}
+
+resource "null_resource" "public_peivate_subnet_zones_check" {
+  count = length(var.private_subnet_cidrs) > 0 && (keys(var.private_subnet_cidrs) != keys(var.public_subnet_cidrs)) ? "The same zones must be supplied when overriding CIDRs" : 0
 }
