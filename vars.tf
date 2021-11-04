@@ -22,14 +22,6 @@ variable "public_subnet_zones" {
   type        = list(string)
   default     = ["a", "b", "c"]
   description = "The public subnet group zones. If private_subnet_zones is set the values from that variable will be used instead and these ignored"
-  #  validation {
-  #    condition     = length(var.public_subnet_zones) <= 3
-  #    error_message = "No more than 3 public zones can be provided."
-  #  }
-  #  validation {
-  #    condition     = length(var.public_subnet_zones) > 0
-  #    error_message = "At least one public zone must be provided."
-  #  }
 }
 
 variable "additional_public_subnet_tags" {
@@ -48,10 +40,6 @@ variable "private_subnet_zones" {
   type        = list(string)
   default     = []
   description = "The private subnet group zones"
-  #  validation {
-  #    condition     = length(var.private_subnet_zones) <= 3
-  #    error_message = "No more than 3 private zones can be provided."
-  #  }
 }
 
 variable "additional_private_subnet_tags" {
