@@ -67,6 +67,6 @@ resource "null_resource" "public_subnet_zones_check_1" {
   count = length(var.public_subnet_zones) < 1 && length(var.public_subnet_cidrs) < 1 ? "At least one public zone (or override) must be provided." : 0
 }
 
-resource "null_resource" "public_peivate_subnet_zones_check" {
+resource "null_resource" "public_private_subnet_zones_check" {
   count = length(var.private_subnet_cidrs) > 0 && (keys(var.private_subnet_cidrs) != keys(var.public_subnet_cidrs)) ? "The same zones must be supplied when overriding CIDRs" : 0
 }
