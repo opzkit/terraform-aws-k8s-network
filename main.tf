@@ -39,6 +39,12 @@ resource "aws_subnet" "private" {
     "SubnetType"                      = "Private"
     "kubernetes.io/role/internal-elb" = "1"
   }, var.additional_private_subnet_tags)
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 }
 
 resource "aws_subnet" "public" {
@@ -51,6 +57,12 @@ resource "aws_subnet" "public" {
     "SubnetType"             = "Utility"
     "kubernetes.io/role/elb" = "1"
   }, var.additional_public_subnet_tags)
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 }
 
 resource "aws_internet_gateway" "igw" {
