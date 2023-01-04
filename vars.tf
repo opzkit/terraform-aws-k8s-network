@@ -54,6 +54,11 @@ variable "private_subnet_cidrs" {
   description = "Override generated CIDRs for private subnets. If specified, this list must match private_subnet_zones."
 }
 
+variable "s3_service_endpoint" {
+  type        = bool
+  default     = false
+  description = "Generate a Service Endpoint to S3 for the created VPC. https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html"
+}
 
 resource "null_resource" "private_subnet_zones_check" {
   count = length(var.private_subnet_zones) > 3 ? "No more than 3 private zones can be provided." : 0
