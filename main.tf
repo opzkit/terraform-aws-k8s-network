@@ -26,7 +26,7 @@ resource "aws_eip" "elastic_ips" {
   tags = {
     "Name" = "${var.region}${each.key}.${var.name}"
   }
-  vpc = true
+  domain = "vpc"
 }
 
 resource "aws_subnet" "private" {
