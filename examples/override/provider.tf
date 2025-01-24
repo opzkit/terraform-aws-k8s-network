@@ -33,3 +33,13 @@ provider "aws" {
     sts            = "http://localhost:4566"
   }
 }
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+  required_version = ">= 1.1.9"
+}
