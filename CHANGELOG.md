@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.12](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.0.11...v0.0.12) (2025-01-30)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump actions/setup-python from 5.3.0 to 5.4.0 ([#36](https://github.com/opzkit/terraform-aws-k8s-network/issues/36)) ([b467a70](https://github.com/opzkit/terraform-aws-k8s-network/commit/b467a7011856ce71d29a1b2389e79619dee18f37))
+* **deps:** bump github/codeql-action from 3.28.4 to 3.28.5 ([#34](https://github.com/opzkit/terraform-aws-k8s-network/issues/34)) ([ad9c584](https://github.com/opzkit/terraform-aws-k8s-network/commit/ad9c584ff618418011fa546a8378ba93bb94780f))
+* **deps:** bump github/codeql-action from 3.28.5 to 3.28.6 ([#37](https://github.com/opzkit/terraform-aws-k8s-network/issues/37)) ([20092c7](https://github.com/opzkit/terraform-aws-k8s-network/commit/20092c77a29a94dffea2a31d992b427d0f856a3d))
+* **deps:** bump github/codeql-action from 3.28.6 to 3.28.7 ([#38](https://github.com/opzkit/terraform-aws-k8s-network/issues/38)) ([3540716](https://github.com/opzkit/terraform-aws-k8s-network/commit/35407162ff44272750f4f0207de40d19a21d6c6a))
+* **deps:** bump github/codeql-action from 3.28.7 to 3.28.8 ([#39](https://github.com/opzkit/terraform-aws-k8s-network/issues/39)) ([b55fd52](https://github.com/opzkit/terraform-aws-k8s-network/commit/b55fd523fcce1e8792dff3d205bb115a5615234d))
+
 ## [0.0.11](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.0.10...v0.0.11) (2025-01-24)
 
 
