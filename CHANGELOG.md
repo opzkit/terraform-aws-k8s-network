@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.0.12](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.0.11...v0.0.12) (2025-03-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump actions/setup-python from 5.3.0 to 5.4.0 ([#36](https://github.com/opzkit/terraform-aws-k8s-network/issues/36)) ([b467a70](https://github.com/opzkit/terraform-aws-k8s-network/commit/b467a7011856ce71d29a1b2389e79619dee18f37))
+* **deps:** bump github/codeql-action from 3.28.4 to 3.28.5 ([#34](https://github.com/opzkit/terraform-aws-k8s-network/issues/34)) ([ad9c584](https://github.com/opzkit/terraform-aws-k8s-network/commit/ad9c584ff618418011fa546a8378ba93bb94780f))
+* **deps:** bump github/codeql-action from 3.28.5 to 3.28.6 ([#37](https://github.com/opzkit/terraform-aws-k8s-network/issues/37)) ([20092c7](https://github.com/opzkit/terraform-aws-k8s-network/commit/20092c77a29a94dffea2a31d992b427d0f856a3d))
+* **deps:** bump github/codeql-action from 3.28.6 to 3.28.7 ([#38](https://github.com/opzkit/terraform-aws-k8s-network/issues/38)) ([3540716](https://github.com/opzkit/terraform-aws-k8s-network/commit/35407162ff44272750f4f0207de40d19a21d6c6a))
+* **deps:** bump github/codeql-action from 3.28.7 to 3.28.8 ([#39](https://github.com/opzkit/terraform-aws-k8s-network/issues/39)) ([b55fd52](https://github.com/opzkit/terraform-aws-k8s-network/commit/b55fd523fcce1e8792dff3d205bb115a5615234d))
+* **deps:** bump github/codeql-action from 3.28.8 to 3.28.9 ([#40](https://github.com/opzkit/terraform-aws-k8s-network/issues/40)) ([b54ec9d](https://github.com/opzkit/terraform-aws-k8s-network/commit/b54ec9d12a3ef71a443e78894ad0784d78250606))
+* **deps:** bump github/codeql-action from 3.28.9 to 3.28.10 ([#41](https://github.com/opzkit/terraform-aws-k8s-network/issues/41)) ([fdc75a7](https://github.com/opzkit/terraform-aws-k8s-network/commit/fdc75a70556c3e9ad362d08738312840f9429ab9))
+* **deps:** bump LocalStack/setup-localstack from 0.2.3 to 0.2.4 ([#42](https://github.com/opzkit/terraform-aws-k8s-network/issues/42)) ([0dce6bd](https://github.com/opzkit/terraform-aws-k8s-network/commit/0dce6bd1da1aebbfb599f8eb5334acd7c2ad8b8d))
+* **deps:** bump terraform-linters/setup-tflint from 4.1.0 to 4.1.1 ([#43](https://github.com/opzkit/terraform-aws-k8s-network/issues/43)) ([4519280](https://github.com/opzkit/terraform-aws-k8s-network/commit/4519280aef827d93180289f0c218eb982727c738))
+
 ## [0.0.11](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.0.10...v0.0.11) (2025-01-24)
 
 
