@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.0...v0.1.1) (2025-04-10)
+
+
+### Miscellaneous Chores
+
+* **terraform:** update required_version to 1.3 ([#61](https://github.com/opzkit/terraform-aws-k8s-network/issues/61)) ([99ff12b](https://github.com/opzkit/terraform-aws-k8s-network/commit/99ff12bd750cc3216e1e035e5b54705f6d34fa16))
+
 ## [0.1.0](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.0.11...v0.1.0) (2025-04-09)
 
 
