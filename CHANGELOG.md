@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.1...v0.1.2) (2025-04-14)
+
+
+### Miscellaneous Chores
+
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.98.1 ([#52](https://github.com/opzkit/terraform-aws-k8s-network/issues/52)) ([77b3334](https://github.com/opzkit/terraform-aws-k8s-network/commit/77b33341dbc5d7f928a02030c3ee67f17a217662))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.0 ([#64](https://github.com/opzkit/terraform-aws-k8s-network/issues/64)) ([67c7c02](https://github.com/opzkit/terraform-aws-k8s-network/commit/67c7c02a16e83dcb2ab6c2106bff8d837d46b41a))
+
 ## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.0...v0.1.1) (2025-04-10)
 
 
