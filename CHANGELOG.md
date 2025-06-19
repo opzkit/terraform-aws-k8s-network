@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.2](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.1...v0.1.2) (2025-06-19)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/setup-python action to v5.6.0 ([#65](https://github.com/opzkit/terraform-aws-k8s-network/issues/65)) ([5ade127](https://github.com/opzkit/terraform-aws-k8s-network/commit/5ade12727a02a0de408ef9e2386f5a9c5c0757b5))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.98.1 ([#52](https://github.com/opzkit/terraform-aws-k8s-network/issues/52)) ([77b3334](https://github.com/opzkit/terraform-aws-k8s-network/commit/77b33341dbc5d7f928a02030c3ee67f17a217662))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.0 ([#64](https://github.com/opzkit/terraform-aws-k8s-network/issues/64)) ([67c7c02](https://github.com/opzkit/terraform-aws-k8s-network/commit/67c7c02a16e83dcb2ab6c2106bff8d837d46b41a))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.1 ([#67](https://github.com/opzkit/terraform-aws-k8s-network/issues/67)) ([34aae4f](https://github.com/opzkit/terraform-aws-k8s-network/commit/34aae4f9f2b4486087eaa4800768d13cc686afc0))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.3 ([#69](https://github.com/opzkit/terraform-aws-k8s-network/issues/69)) ([7db99d4](https://github.com/opzkit/terraform-aws-k8s-network/commit/7db99d4aca73bfc1c052379c9bbe92886ed94e7e))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.4 ([#70](https://github.com/opzkit/terraform-aws-k8s-network/issues/70)) ([d520fbf](https://github.com/opzkit/terraform-aws-k8s-network/commit/d520fbfab51936302d1765c99c04fbd129a302be))
+* **deps:** update terraform aws to v6 ([#71](https://github.com/opzkit/terraform-aws-k8s-network/issues/71)) ([611754b](https://github.com/opzkit/terraform-aws-k8s-network/commit/611754b3aceed0672fdd59a66928e6821daea5c5))
+* remove unnecessary work flow for release please ([#66](https://github.com/opzkit/terraform-aws-k8s-network/issues/66)) ([049d6e2](https://github.com/opzkit/terraform-aws-k8s-network/commit/049d6e242c900bf9731e998357c1842542e8a725))
+
 ## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.0...v0.1.1) (2025-04-10)
 
 
