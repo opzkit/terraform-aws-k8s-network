@@ -7,7 +7,7 @@ terraform {
 
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.1"
+      version = "~> 6.0"
     }
   }
   required_version = ">= 1.3"
