@@ -15,3 +15,12 @@ output "public_subnets" {
   })
   description = "The public networks created as a map <zone> => <subnet id>"
 }
+
+output "subnets" {
+  value = {
+    "public"  = aws_subnet.public
+    "private" = aws_subnet.private
+  }
+
+  description = "The networks created as a map <public|private> => map <zone> => <subnet>"
+}
