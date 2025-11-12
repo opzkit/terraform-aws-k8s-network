@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.2.0...v0.2.1) (2025-11-12)
+
+
+### Miscellaneous Chores
+
+* **deps:** update terraform-linters/setup-tflint action to v6.2.1 ([#122](https://github.com/opzkit/terraform-aws-k8s-network/issues/122)) ([5fe0d8e](https://github.com/opzkit/terraform-aws-k8s-network/commit/5fe0d8e6374f5b8e70b46c706ad0d30001a82d40))
+* enhance PR auto-merge workflow with token retrieval ([#124](https://github.com/opzkit/terraform-aws-k8s-network/issues/124)) ([f37538b](https://github.com/opzkit/terraform-aws-k8s-network/commit/f37538bf38c63c56e68ade22b68617c0207ad0ec))
+
 ## [0.2.0](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.2...v0.2.0) (2025-10-29)
 
 
