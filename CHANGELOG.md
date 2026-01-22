@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.2.1](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.2.0...v0.2.1) (2026-01-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v5.0.1 ([#126](https://github.com/opzkit/terraform-aws-k8s-network/issues/126)) ([1489a96](https://github.com/opzkit/terraform-aws-k8s-network/commit/1489a96b78fe9df8ac4a0a7135ca50ad9625c085))
+* **deps:** update actions/checkout action to v6 ([#128](https://github.com/opzkit/terraform-aws-k8s-network/issues/128)) ([8a4fa79](https://github.com/opzkit/terraform-aws-k8s-network/commit/8a4fa79ea57125257b9ac565415502005c60320a))
+* **deps:** update actions/checkout action to v6.0.1 ([#134](https://github.com/opzkit/terraform-aws-k8s-network/issues/134)) ([f904744](https://github.com/opzkit/terraform-aws-k8s-network/commit/f90474405eb248fecfe6b6d5940a26cbff30b969))
+* **deps:** update actions/checkout action to v6.0.2 ([#145](https://github.com/opzkit/terraform-aws-k8s-network/issues/145)) ([55cc256](https://github.com/opzkit/terraform-aws-k8s-network/commit/55cc256c882b268f205c1afc829a202c2538135e))
+* **deps:** update actions/checkout digest to 8e8c483 ([#133](https://github.com/opzkit/terraform-aws-k8s-network/issues/133)) ([e9bca72](https://github.com/opzkit/terraform-aws-k8s-network/commit/e9bca7250ee531558e247354cff12bea4784d08d))
+* **deps:** update actions/checkout digest to 93cb6ef ([#125](https://github.com/opzkit/terraform-aws-k8s-network/issues/125)) ([4b045ef](https://github.com/opzkit/terraform-aws-k8s-network/commit/4b045ef5d934af14f8c590c768872e5f9a6142d8))
+* **deps:** update actions/create-github-app-token digest to 29824e6 ([#135](https://github.com/opzkit/terraform-aws-k8s-network/issues/135)) ([224b82e](https://github.com/opzkit/terraform-aws-k8s-network/commit/224b82e0512fa88da735609d8c68f50b333070d5))
+* **deps:** update actions/create-github-app-token digest to 7e473ef ([#129](https://github.com/opzkit/terraform-aws-k8s-network/issues/129)) ([5b5dd3c](https://github.com/opzkit/terraform-aws-k8s-network/commit/5b5dd3cd80951618527cf4b7992a52caeb9e9e37))
+* **deps:** update actions/setup-python action to v6.1.0 ([#132](https://github.com/opzkit/terraform-aws-k8s-network/issues/132)) ([125baa3](https://github.com/opzkit/terraform-aws-k8s-network/commit/125baa3cbefec4ad27f9dfccd77bea88ac5efb09))
+* **deps:** update actions/setup-python action to v6.2.0 ([#144](https://github.com/opzkit/terraform-aws-k8s-network/issues/144)) ([c344c28](https://github.com/opzkit/terraform-aws-k8s-network/commit/c344c28856b6db91cc19be9b9c81cd620a0f3c15))
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.24.0 ([#142](https://github.com/opzkit/terraform-aws-k8s-network/issues/142)) ([e2be77a](https://github.com/opzkit/terraform-aws-k8s-network/commit/e2be77a8120349618d83f09c53f23240f01b2f5a))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.104.0 ([#127](https://github.com/opzkit/terraform-aws-k8s-network/issues/127)) ([20bc16c](https://github.com/opzkit/terraform-aws-k8s-network/commit/20bc16c1b9d5be63313703952849517574822f33))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.104.1 ([#138](https://github.com/opzkit/terraform-aws-k8s-network/issues/138)) ([c6c8319](https://github.com/opzkit/terraform-aws-k8s-network/commit/c6c8319f68ff0c8380cee28955cd1ef37cbf8cbc))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.105.0 ([#140](https://github.com/opzkit/terraform-aws-k8s-network/issues/140)) ([f0f8e06](https://github.com/opzkit/terraform-aws-k8s-network/commit/f0f8e0662138e5c57b0814c6485b2aad2a8ed7f5))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v41.173.1 ([#130](https://github.com/opzkit/terraform-aws-k8s-network/issues/130)) ([c2e9438](https://github.com/opzkit/terraform-aws-k8s-network/commit/c2e94381e825b7b05ac1e295e30cdd27d2250212))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42 ([#131](https://github.com/opzkit/terraform-aws-k8s-network/issues/131)) ([5352417](https://github.com/opzkit/terraform-aws-k8s-network/commit/5352417b23a36e68eb7a79a71767a2b21da01b65))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.39.2 ([#136](https://github.com/opzkit/terraform-aws-k8s-network/issues/136)) ([94c1030](https://github.com/opzkit/terraform-aws-k8s-network/commit/94c1030270a1613616196003328d328272ca0022))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.66.11 ([#137](https://github.com/opzkit/terraform-aws-k8s-network/issues/137)) ([128661f](https://github.com/opzkit/terraform-aws-k8s-network/commit/128661fdc3cc82608b324d267ee2f1f24d7a4b34))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.71.0 ([#139](https://github.com/opzkit/terraform-aws-k8s-network/issues/139)) ([f8b3660](https://github.com/opzkit/terraform-aws-k8s-network/commit/f8b36600d4b14a248a52a7c89d97de29dce7283c))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.78.1 ([#141](https://github.com/opzkit/terraform-aws-k8s-network/issues/141)) ([e7d839b](https://github.com/opzkit/terraform-aws-k8s-network/commit/e7d839b85241de6c0e7917ddc462d63c89fe37ad))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.84.0 ([#143](https://github.com/opzkit/terraform-aws-k8s-network/issues/143)) ([b0a8acc](https://github.com/opzkit/terraform-aws-k8s-network/commit/b0a8acc3ff5499da152a39bf5e93d5d6f8037796))
+* **deps:** update terraform-linters/setup-tflint action to v6.2.1 ([#122](https://github.com/opzkit/terraform-aws-k8s-network/issues/122)) ([5fe0d8e](https://github.com/opzkit/terraform-aws-k8s-network/commit/5fe0d8e6374f5b8e70b46c706ad0d30001a82d40))
+* enhance PR auto-merge workflow with token retrieval ([#124](https://github.com/opzkit/terraform-aws-k8s-network/issues/124)) ([f37538b](https://github.com/opzkit/terraform-aws-k8s-network/commit/f37538bf38c63c56e68ade22b68617c0207ad0ec))
+
 ## [0.2.0](https://github.com/opzkit/terraform-aws-k8s-network/compare/v0.1.2...v0.2.0) (2025-10-29)
 
 
