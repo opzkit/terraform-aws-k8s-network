@@ -9,4 +9,3 @@ example/%:
 	@echo "Processing example: $(notdir $*)"
 	@terraform -chdir=$* init
 	@terraform -chdir=$* validate
-	@terraform -chdir=$* plan
